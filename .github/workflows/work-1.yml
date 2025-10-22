@@ -22,3 +22,7 @@ jobs:
         run: sleep 20  # 20초 대기
       - name: sayMyName
         run: echo "${{ github.actor }}"
+      - uses: actions/checkout@v4
+      - uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
